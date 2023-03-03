@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+</head>
+<body>
+    <div>
+        <p>
+            <a name = "Decbin"><u><li>Decimal para binário</li></u></a>
+        </p>
+        <p>
+            <input type="number" placeholder="Limite 65535" id="input_number_DecBin">
+        </p>
+        <p>
+            <button onclick="ContaDecimalBinario()">
+                Calcular
+            </button>
+        </p>
+        <p>
+            <pre>Resultado: <a id='DeBi'></a></pre>
+            <pre>Conta: <a id='DeBi1'></a></pre>
+        </p>
+    </div>
+</body>
+<script>
+    function ContaDecimalBinario() {
+                document.getElementById('DeBi').innerHTML = ""
+                var calcula_DecBin = input_number_DecBin.value
+                var x = 0
+                while (calcula_DecBin >= 0){
+                    var calcula_DecBin = calcula_DecBin - 2^x
+                    x = x + 1
+                    if (calcula_DecBin < 0) {
+                    document.getElementById('DeBi').innerHTML += "0"
+                    } else {
+                    document.getElementById('DeBi').innerHTML += "1"
+                    }
+                }
+                //parse int
+                /*for (var x = 0; calcula_DecBin > 0; x++) {
+                    var y = calcula_DecBin - (2^x)
+                    if (calcula_DecBin >= y) {
+                        document.getElementById('DeBi').innerHTML += "0"
+                    } else {
+                        document.getElementById('DeBi').innerHTML += "1"
+                    }
+                }*/
+                //document.getElementById('DeBi1').innerHTML = `<br>${calcula_DecBin} - 32768 = ${calcula_DecBin15} (${db16})<br>${calcula_DecBin15} - 16384 = ${calcula_DecBin14} (${db15})<br>${calcula_DecBin14} - 8192 = ${calcula_DecBin13} (${db14})<br>${calcula_DecBin13} - 4096 = ${calcula_DecBin12} (${db13})<br>${calcula_DecBin12} - 2048 = ${calcula_DecBin11} (${db12})<br>${calcula_DecBin11} - 1024 = ${calcula_DecBin10} (${db11})<br>${calcula_DecBin10} - 512 = ${calcula_DecBin9} (${db10})<br>${calcula_DecBin9} - 256 = ${calcula_DecBin8} (${db9})<br>${calcula_DecBin8} - 128 = ${calcula_DecBin7} (${db8})<br>${calcula_DecBin7} - 64 = ${calcula_DecBin6} (${db7})<br>${calcula_DecBin6} - 32 = ${calcula_DecBin5} (${db6})<br>${calcula_DecBin5} - 16 = ${calcula_DecBin4} (${db5})<br>${calcula_DecBin4} - 8 = ${calcula_DecBin3} (${db4})<br>${calcula_DecBin3} - 4 = ${calcula_DecBin2} (${db3})<br>${calcula_DecBin2} - 2 = ${calcula_DecBin1} (${db2})<br>${calcula_DecBin1} - 1 = ${calcula_DecBin0} (${db1})`
+            }
+</script>
+</html>
