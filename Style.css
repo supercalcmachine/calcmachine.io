@@ -257,3 +257,7 @@ color: #ffffff;
 
 }
 
+.input_vazio{
+opacity: 0%;
+height: 0px;
+}
