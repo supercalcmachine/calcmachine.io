@@ -1701,3 +1701,174 @@ function ContaHexadecimalOctal() {
     else {document.getElementById('HeOc1').innerHTML = ``}
     
 }
+
+
+function getRandomInt(min, max) {
+    min = Math.ceil(0);
+    max = Math.floor(1);
+    number1 = Math.floor(Math.random() * 2).toString()
+    number2 = Math.floor(Math.random() * 2).toString()
+    number3 = Math.floor(Math.random() * 2).toString()
+    number4 = Math.floor(Math.random() * 2).toString()
+    number5 = Math.floor(Math.random() * 2).toString()
+    number6 = Math.floor(Math.random() * 2).toString()
+    number7 = Math.floor(Math.random() * 2).toString()
+    number8 = Math.floor(Math.random() * 2).toString()
+    number9 = Math.floor(Math.random() * 2).toString()
+    number10 = Math.floor(Math.random() * 2).toString()
+    number11 = Math.floor(Math.random() * 2).toString()
+    number12 = Math.floor(Math.random() * 2).toString()
+    number13 = Math.floor(Math.random() * 2).toString()
+    number14 = Math.floor(Math.random() * 2).toString()
+    number15 = Math.floor(Math.random() * 2).toString()
+    number16 = Math.floor(Math.random() * 2).toString()
+
+    var exbd1 = number4 + number3 + number2 + number1
+    document.getElementById('ExUm').innerHTML = `${exbd1}<input type="checkbox" id="verifica_Exbd1">`
+    var exbd2 = number8 + number7 + number6 + number5 + number4 + number3 + number2 + number1
+    document.getElementById('ExDois').innerHTML = `${exbd2}<input type="checkbox" id="verifica_Exbd2">`
+    var exbd3 = number12 + number11 + number10 + number9 + number8 + number7 + number6 + number5 + number4 + number3 + number2 + number1
+    document.getElementById('ExTres').innerHTML = `${exbd3}<input type="checkbox" id="verifica_Exbd3">`
+    var exbd4 = number16 + number15 + number14 + number13 + number12 + number11 + number10 + number9 + number8 + number7 + number6 + number5 + number4 + number3 + number2 + number1
+    document.getElementById('ExQuatro').innerHTML = `${exbd4}<input type="checkbox" id="verifica_Exbd4">`
+            /*Binário para Decimal*/
+            if (number1 == 1) {
+                var bd1 = 1
+            } else {
+                var bd1 = 0
+            }
+            if (number2 == 1) {
+                var bd2 = 2
+            } else {
+                var bd2 = 0
+            }
+            if (number3 == 1) {
+                var bd3 = 4
+            } else {
+                var bd3 = 0
+            }
+            if (number4 == 1) {
+                var bd4 = 8
+            } else {
+                var bd4 = 0
+            }
+            if (number5 == 1) {
+                var bd5 = 16
+            } else {
+                var bd5 = 0
+            }
+            if (number6 == 1) {
+                var bd6 = 32
+            } else {
+                var bd6 = 0
+            }
+            if (number7 == 1) {
+                var bd7 = 64
+            } else {
+                var bd7 = 0
+            }
+            if (number8 == 1) {
+                var bd8 = 128
+            } else {
+                var bd8 = 0
+            }
+            if (number9 == 1) {
+                var bd9 = 256
+            } else {
+                var bd9 = 0
+            }
+            if (number10 == 1) {
+                var bd10 = 512
+            } else {
+                var bd10 = 0
+            }
+            if (number11 == 1) {
+                var bd11= 1024
+            } else {
+                var bd11 = 0
+            }
+            if (number12 == 1) {
+                var bd12 = 2048
+            } else {
+                var bd12 = 0
+            }
+            if (number13 == 1) {
+                var bd13 = 4096
+            } else {
+                var bd13 = 0
+            }
+            if (number14 == 1) {
+                var bd14 = 8192
+            } else {
+                var bd14 = 0
+            }
+            if (number15 == 1) {
+                var bd15 = 16384
+            } else {
+                var bd15 = 0
+            }
+            if (number16 == 1) {
+                var bd16 = 32768
+            } else {
+                var bd16 = 0
+            }
+            var geral_BinDec_Ex1 = (bd1 + bd2 + bd3 + bd4)
+            var geral_BinDec_Ex2 = (bd1 + bd2 + bd3 + bd4 + bd5 + bd6 + bd7 + bd8)
+            var geral_BinDec_Ex3 = (bd1 + bd2 + bd3 + bd4 + bd5 + bd6 + bd7 + bd8 + bd9 + bd10 + bd11 + bd12)
+            var geral_BinDec_Ex4 = (bd1 + bd2 + bd3 + bd4 + bd5 + bd6 + bd7 + bd8 + bd9 + bd10 + bd11 + bd12 + bd13 + bd14 + bd15 + bd16)
+            mensagem_ExUm1.value = geral_BinDec_Ex1
+            mensagem_ExUm2.value = geral_BinDec_Ex2
+            mensagem_ExUm3.value = geral_BinDec_Ex3
+            mensagem_ExUm4.value = geral_BinDec_Ex4
+}
+function Verificar_BinDec() {
+    var ExIchi = mensagem_ExUm1.value
+    var ExNi = mensagem_ExUm2.value
+    var ExSan = mensagem_ExUm3.value
+    var ExYon = mensagem_ExUm4.value
+    var ExOne = input_ex1.value
+    var verifica_ExUmbd = document.getElementById("verifica_Exbd1");
+    var verifica_ExDoisbd = document.getElementById("verifica_Exbd2");
+    var verifica_ExTresbd = document.getElementById("verifica_Exbd3");
+    var verifica_ExQuatrobd = document.getElementById("verifica_Exbd4");
+    document.getElementById('mensagem_ExUm').innerHTML = ``
+    document.getElementById('mensagem_ExDois').innerHTML = ``
+    document.getElementById('mensagem_ExTres').innerHTML = ``
+    document.getElementById('mensagem_ExQuatro').innerHTML = ``
+    if (verifica_ExUmbd.checked == true) {
+        if (ExIchi == ExOne) {
+            document.getElementById('mensagem_ExUm').innerHTML = `O resultado é ${ExIchi}!`
+            document.getElementById('mensagem_ExUm').innerHTML += `<p>Parabéns você acertou!</p>`
+        } else {
+            document.getElementById('mensagem_ExUm').innerHTML = `O resultado é ${ExIchi}!`
+            document.getElementById('mensagem_ExUm').innerHTML += `<p>Precisa estudar mais!</p>`
+        }
+    }
+    if (verifica_ExDoisbd.checked == true) {
+        if (ExNi == ExOne) {
+            document.getElementById('mensagem_ExDois').innerHTML = `O resultado é ${ExNi}!`
+            document.getElementById('mensagem_ExDois').innerHTML += `<p>Parabéns você acertou!</p>`
+        } else {
+            document.getElementById('mensagem_ExDois').innerHTML = `O resultado é ${ExNi}!`
+            document.getElementById('mensagem_ExDois').innerHTML += `<p>Precisa estudar mais!</p>`
+        }
+    }
+    if (verifica_ExTresbd.checked == true) {
+        if (ExSan == ExOne) {
+            document.getElementById('mensagem_ExTres').innerHTML = `O resultado é ${ExSan}!`
+            document.getElementById('mensagem_ExTres').innerHTML += `<p>Parabéns você acertou!</p>`
+        } else {
+            document.getElementById('mensagem_ExTres').innerHTML = `O resultado é ${ExSan}!`
+            document.getElementById('mensagem_ExTres').innerHTML += `<p>Precisa estudar mais!</p>`
+        }
+    }
+    if (verifica_ExQuatrobd.checked == true) {
+        if (ExYon == ExOne) {
+            document.getElementById('mensagem_ExQuatro').innerHTML = `O resultado é ${ExYon}!`
+            document.getElementById('mensagem_ExQuatro').innerHTML += `<p>Parabéns você acertou!</p>`
+        } else {
+            document.getElementById('mensagem_ExQuatro').innerHTML = `O resultado é ${ExYon}!`
+            document.getElementById('mensagem_ExQuatro').innerHTML += `<p>Precisa estudar mais!</p>`
+        }
+    }
+}
